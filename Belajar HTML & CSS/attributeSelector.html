@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Judul Dokumen</title>
+   <style>
+       /* <a> element yang menerapkan href attribut */
+       a[href] {
+           color: blue;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+       a[href^="#"] {
+           background-color: gold;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+       a[href*="example"] {
+           background-color: silver;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+       a[href*="insensitive" i] {
+           color: cyan;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+       a[href$=".org"] {
+           color: red;
+       }
+   </style>
+</head>
+<body>
+<ul>
+   <ul>
+       <li><a href="#internal">Internal link</a></li>
+       <li><a href="http://example.com">Example link</a></li>
+       <li><a href="#InSensitive">Insensitive internal link</a></li>
+       <li><a href="http://example.org">Example org link</a></li>
+   </ul>
+</ul>
+</body>
+</html>
