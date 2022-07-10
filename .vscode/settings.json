@@ -1,8 +1,0 @@
-{
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 600,
-  "discord.swapBigAndSmallImage": true,
-  "discord.removeDetails": true,
-  "discord.removeLowerDetails": true,
-  "discord.removeRemoteRepository": true
-}
