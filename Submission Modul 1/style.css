@@ -1,0 +1,50 @@
+
+
+
+header {
+    text-align: center;
+}
+
+nav  ul li {
+    display: inline-block;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: blue;
+}
+
+.description {
+    background-color: aqua;
+}
+
+.education {
+    background-color: blueviolet;
+}
+
+.organization {
+    background-color: darkcyan;
+}
+
+.experience {
+    background-color: rgb(127, 189, 194);
+}
+
+.skills {
+    background-color: crimson;
+}
+
+.contact {
+    background-color: blue;
+}
+
+footer {
+    background-color: mediumseagreen;
+}
