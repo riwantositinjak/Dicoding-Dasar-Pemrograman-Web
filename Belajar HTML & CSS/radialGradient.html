@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Radial Gradient</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(90deg, rgba(255,24,25,.2), rgba(243,225,22,.5));
+            margin: 100px auto;
+            box-shadow: 5px 5px 5px 3px rgb(102, 87, 4), -5px -5px 5px 2px rgba(235, 68, 102, 0.2);
+            border: 1px solid rgba(75, 40, 233, 0.5);
+            line-height: 300px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(17, 188, 231,);
+            text-shadow: 10px 10px 5px rgba(95, 90, 33, 0.5) ;
+            border-radius: 50% 0 50% 0 ;
+            cursor: pointer;
+        }
+
+        div:hover {
+            background: radial-gradient(90deg, rgba(206, 6, 6, 0.2), rgba(182, 168, 14, 0.5));
+            box-shadow: 5px 5px 5px 3px rgb(216, 186, 17), -5px -5px 5px 2px rgba(224, 5, 49, 0.2);
+            transition: 3ms;
+            animation: backwards;
+        }
+    </style>
+</head>
+<body>
+    <div>Para Para Bujang</div>
+</body>
+</html>

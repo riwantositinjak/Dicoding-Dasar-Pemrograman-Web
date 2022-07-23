@@ -1,3 +1,15 @@
+@keyframes goyangGambar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -55,10 +67,16 @@ nav a {
     cursor: pointer;
     color: white;
     justify-content: space-between;
+    transition: 1s;
 }
 
 nav a:hover {
+    padding: 5px 0 0 5px;
     color: black;
+}
+
+.description {
+    font-size: 18px;
 }
 
 .box {
@@ -94,14 +112,20 @@ nav a:hover {
 
 .background .telkomsc img {
     width: 150px;
+    transition: 1s;
 }
 
 .background .college img {
     width: 190px;
 }
 
+.background .telkomsc img:hover {
+    margin: 5px 0 0 5px;
+}
+
 .skills figure {
     justify-content: center;
+    cursor: pointer;
 }
 
 
@@ -119,6 +143,12 @@ figcaption {
 .skills .grup-skill img {
     width: 200px;
 }
+
+.skills .grup-skill img:hover {
+    animation: goyangGambar 2s;
+    animation-iteration-count: infinite;
+}
+
 
 .grup-skill figcaption {
     margin-top: 10px;
