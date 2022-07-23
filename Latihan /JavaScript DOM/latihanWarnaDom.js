@@ -7,10 +7,12 @@ body.style.textAlign = 'center';
 const div = document.createElement('div');
 body.appendChild(div);
 
-
+// membuat elemen h1 dan di berikan sebuah teks
 const h1 = document.createElement('h1');
 const teksH1 = document.createTextNode('Bermain dengan Warna');
 h1.appendChild(teksH1);
+
+// memasukkan elemen h1 ke dalam elemen div sebagai parentnya 
 div.appendChild(h1);
 
 
@@ -23,8 +25,8 @@ div.appendChild(button);
 
 // styling button 
 button.appendChild(buttonText);
-button.style.padding='10px';
-button.style.backgroundColor='white'
+button.style.padding = '10px';
+button.style.backgroundColor = 'white'
 button.style.borderRadius = '8px';
 button.style.margin = '10px 0 0 0';
 
