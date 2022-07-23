@@ -1,7 +1,7 @@
 // Penggunaan addEventListener 
 const sectionB = document.querySelector('section#b p');
 
-sectionB.addEventListener('click', function(){
+sectionB.addEventListener('click', function () {
 
     // buat element yang ingin di tambahkan ketika event click
     const itemNew = document.createElement('li');
@@ -18,11 +18,11 @@ sectionB.addEventListener('click', function(){
 // Event handler menimpa event handler elemen sebelumnya
 
 const p3 = document.querySelector('.p3');
-p3.onclick = function() {
+p3.onclick = () => {
     p3.style.backgroundColor = 'red';
 }
 
-p3.onclick = function(){
+p3.onclick = () => {
     p3.style.color = 'yellow';
 }
 
