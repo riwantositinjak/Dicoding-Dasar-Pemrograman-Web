@@ -21,16 +21,20 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0;
+
 }
 
 main {
-    padding: 10px;
-    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: auto; */
+    justify-content: space-between;
+    margin : 0 auto;
 }
 
-.content {
-    float: left ;
-    width: 75%;
+#content {
+    flex: 3;
+    margin: 0 auto;
 }
 
 header {
@@ -81,19 +85,21 @@ nav a {
     text-align: center;
 }
 
-/* nav a:hover {
+nav a:hover {
     padding: 5px 0 0 5px;
     color: black;
-} */
+}
 
 .description {
     font-size: 18px;
 }
 
+
 .box {
+    box-shadow: 2px 2px 2px 2px lightblue, -2px -2px 2px 2px lightblue  ;
     border-radius: 10px;
-    color: white;
-    margin-top: 10px;
+    background: lightblue;
+    margin: 15px 10px 0 10px;
     padding: 15px;
     text-align: center;
 }
@@ -116,6 +122,17 @@ nav a {
 .education section{
     justify-content: center;
     cursor: pointer;
+}
+
+
+.experience .telkom{
+    width: 200px;
+    height: 150px;
+}
+
+.experience .inti {
+    width: 200px;
+    height: 150px;
 }
 
 
@@ -188,17 +205,29 @@ figcaption {
 .box section table tr {
     text-align: center;
 }
-aside {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
+
+.aside {
+    flex: 1;
+    margin: 0 ;
 }
 
-aside .left-aside {
-    float : left;
-    width: 25%;
+.aside .left-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.aside .left-aside button {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    line-height: 50px;
+    border-radius: 10px ;
+}
+
+.aside button {
+    display: flex;
+}
 
 #social {
     display: flex;
@@ -226,8 +255,8 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-    header, .content,
-    aside {
+    header, main,
+    .aside {
         width: 100%;
         padding: 0;
     }
