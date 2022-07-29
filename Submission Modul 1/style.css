@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 @keyframes goyangGambar {
     from {
         transform: rotate(0deg);
@@ -29,7 +31,7 @@ main {
     flex-wrap: wrap;
     /* overflow: auto; */
     justify-content: space-between;
-    margin : 0 auto;
+    margin: 0 auto;
 }
 
 #content {
@@ -37,17 +39,17 @@ main {
     margin: 0 auto;
 }
 
-header {
+/* header {
     display: inline;
-}
+} */
 
-.heading {
+/* .heading {
     padding: 40px;
     background-image: linear-gradient(to right top, #1d5dd4, #0062c1, #0063aa, #106191, #355e78);
     text-align: center;
     font-size: 22px;
     font-family: 'Righteous', cursive;
-}
+} */
 
 
 nav {
@@ -55,18 +57,43 @@ nav {
     background: #3AB4F2;
     padding: 5px;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
     position: sticky;
-    top: 0; 
+    top: 0;
     text-align: center;
 }
 
+nav .logo {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
 
-nav h1 {
-    display: inline;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
+nav h4 {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.icon div {
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -74,15 +101,19 @@ nav li {
     text-transform: uppercase;
 }
 
-nav a {
+.navigation a {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
     color: white;
-    justify-content: space-between;
+    justify-content: space-around;
     transition: 1s;
-    text-align: center;
+    align-items: center;
+}
+
+.navigation li {
+    list-style: none;
 }
 
 nav a:hover {
@@ -96,7 +127,7 @@ nav a:hover {
 
 
 .box {
-    box-shadow: 2px 2px 2px 2px lightblue, -2px -2px 2px 2px lightblue  ;
+    box-shadow: 2px 2px 2px 2px lightblue, -2px -2px 2px 2px lightblue;
     border-radius: 10px;
     background: lightblue;
     margin: 15px 10px 0 10px;
@@ -112,6 +143,7 @@ nav a:hover {
     list-style-type: none;
     text-align: center;
 }
+
 .education .background {
     display: flex;
     flex-wrap: wrap;
@@ -119,13 +151,13 @@ nav a:hover {
     font-size: 18px;
 }
 
-.education section{
+.education section {
     justify-content: center;
     cursor: pointer;
 }
 
 
-.experience .telkom{
+.experience .telkom {
     width: 200px;
     height: 150px;
 }
@@ -183,7 +215,7 @@ figcaption {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-size: cover ;
+    background-size: cover;
 
 }
 
@@ -208,7 +240,7 @@ figcaption {
 
 .aside {
     flex: 1;
-    margin: 0 ;
+    margin: 0;
 }
 
 .aside .left-aside {
@@ -222,7 +254,7 @@ figcaption {
     height: 100px;
     align-items: center;
     line-height: 50px;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 .aside button {
@@ -235,7 +267,7 @@ figcaption {
     justify-content: center;
 }
 
-#social li a{
+#social li a {
     color: #000;
     font-size: 17px;
 }
@@ -255,16 +287,67 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-    header, main,
+
+    header,
+    main,
     .aside {
         width: 100%;
         padding: 0;
     }
 }
 
+@media screen and (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    .navigation {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background: #3AB4F2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+    }
 
+    .navigation li {
+        opacity: 0;
+    }
 
+    .icon {
+        display: block;
+    }
+}
 
+.nav-active {
+    transform: translateX(0%);
+}
 
+@keyframes navigationLinkAnimate {
+    from {
+        opacity: 1;
+        transform: translateX(50px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
