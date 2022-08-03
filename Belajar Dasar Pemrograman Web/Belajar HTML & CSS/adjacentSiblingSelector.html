@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Judul Dokumen</title>
+   <style>
+       /* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+       img + p {
+           color: green;
+       }
+   </style>
+</head>
+<body>
+<p>Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada elemen paragraf ini.</p>
+<img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding logo" width="400px">
+<p>Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka paragraf ini seharusnya menerapkan rule dengan menampilkan teks berwarna hijau.</p>
+<p>Ini merupakan paragraf ketiga. Letaknya memang setelah elemen gambar, namun tidak diletakkan persis setelahnya, sehingga rule tidak akan diterapkan pada elemen ini.</p>
+</body>
+</html>
