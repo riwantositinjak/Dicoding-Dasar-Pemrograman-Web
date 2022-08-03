@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Direction Manipulation</title>
+    <style>
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            
+            width: 800px;
+            height: 400px;
+            padding: 20px;
+            margin: 0 auto;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: lightblue;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            padding: 20px;
+            margin : 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: blue;
+        }
+        .box {
+            flex-grow: 1;
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-column">
+        <div class="flex-row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="flex-row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </flex-column>
+</body>
+</html>

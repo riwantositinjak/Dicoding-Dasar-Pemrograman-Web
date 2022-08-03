@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Uchen&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Uchen", serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  font-family: "Courier New", Courier, monospace;
+  background: #3ab4f2;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  text-align: center;
+}
+
+nav .logo {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.navigation li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  justify-content: space-around;
+  transition: 1s;
+  align-items: center;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.navigation a:hover {
+  padding: 5px 0 0 5px;
+  color: black;
+}
+
+.icon div {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#content {
+  flex: 3;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.box {
+  box-shadow: 2px 2px 2px 2px lightblue, -2px -2px 2px 2px lightblue;
+  border-radius: 10px;
+  background: lightblue;
+  margin: 15px 10px 0 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.box a {
+  color: #000;
+}
+
+.box ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.education .background {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.education section {
+  justify-content: center;
+  cursor: pointer;
+}
+
+.background {
+  display: flex;
+}
+
+.background .telkomsc img {
+  width: 150px;
+}
+
+.background .college img {
+  width: 190px;
+}
+
+.experience .telkom {
+  width: 200px;
+  height: 150px;
+}
+
+.experience .inti {
+  width: 200px;
+  height: 150px;
+}
+
+.skills figure {
+  justify-content: center;
+  cursor: pointer;
+}
+
+.skills .grup-skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+figcaption {
+  text-align: center;
+  margin: 0;
+}
+
+.skills .grup-skill img {
+  width: 200px;
+}
+
+.skills .grup-skill img:hover {
+  animation: goyangGambar 2s;
+  animation-iteration-count: infinite;
+}
+
+.grup-skill figcaption {
+  margin-top: 10px;
+}
+
+.contact img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.contact figcaption {
+  text-align: left;
+  font-weight: bold;
+}
+
+.contact ul li a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.box figcaption {
+  text-align: center;
+  font-size: 20px;
+}
+
+.box section table tr {
+  text-align: center;
+}
+
+.aside {
+  flex: 1;
+  margin: 0;
+}
+
+.aside .left-aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside .left-aside button {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  line-height: 50px;
+  border-radius: 10px;
+}
+
+.aside button {
+  display: flex;
+}
+
+#social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#social li a {
+  color: #000;
+  font-size: 17px;
+}
+
+#social img {
+  width: 75px;
+  height: 75px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 19px;
+  font-weight: bold;
+  background: #00a2c6;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+@keyframes goyangGambar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    position: sticky;
+    top: 0;
+  }
+
+  main,
+  .aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background: #3ab4f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
+  }
+
+  .navigation li {
+    opacity: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    position: sticky;
+    top: 0;
+  }
+
+  main,
+  .aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background: #3ab4f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
+  }
+
+  .navigation li {
+    opacity: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    position: sticky;
+    top: 0;
+  }
+
+  main,
+  .aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    background: #3ab4f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
+  }
+
+  .navigation li {
+    opacity: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navigationLinkAnimate {
+  from {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
