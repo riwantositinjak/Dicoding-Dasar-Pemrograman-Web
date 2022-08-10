@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event World</title>
+
+    <style>
+      .contents {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        padding: 15px;
+      }
+
+      #generateButton {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents" align="center" hidden>
+      <button id="incrementButton">Tekan Aku :)</button>
+      <h3>
+        Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span>
+      </h3>
+    </div>
+
+    <script>
+      // Kode JavaScript kita
+      const welcome = () => {
+        alert(
+          "Aku muncul, ketika aku menghilang maka element html akan terlihat"
+        );
+        const content = document.getElementsByClassName("contents");
+        content[0].removeAttribute("hidden");
+
+        function increment() {
+          document.getElementById("count").innerText++;
+          if (document.getElementById("count").innerText == 7) {
+            const hiddenMessage = document.createElement("h4");
+            hiddenMessage.innerText =
+              "Selamat! Anda menemukan hadiah tersembunyi...";
+            const image = document.createElement("img");
+            image.setAttribute("src", "https://i.ibb.co/0V49VRZ/catto.jpg");
+            const content = document.querySelector(".contents");
+            content.appendChild(hiddenMessage).appendChild(image);
+          }
+        }
+        document.getElementById("incrementButton").onclick = increment;
+      };
+    </script>
+    document.body.onload = welcome;
+  </body>
+</html>
