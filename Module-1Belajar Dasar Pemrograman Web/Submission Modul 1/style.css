@@ -276,9 +276,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
-  body {
+  /* body {
     overflow-x: hidden;
-  }
+  } */
 
   .nav-bar {
     position: sticky;
@@ -330,7 +330,6 @@ footer {
     width: 100%;
     padding: 0;
   }
-
   .navigation {
     position: absolute;
     right: 0;

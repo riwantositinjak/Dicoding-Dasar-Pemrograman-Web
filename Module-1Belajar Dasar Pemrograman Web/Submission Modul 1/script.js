@@ -10,7 +10,7 @@ const slide = () => {
     // animate Links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
-        link.style.animation = "";
+        link.style.animation = "hidden";
       } else {
         link.style.animation = `navigationLinkAnimate 0.5s ease forwards ${
           index / 7 + 1
