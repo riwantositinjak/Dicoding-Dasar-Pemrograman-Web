@@ -19,7 +19,7 @@
             <label for="search">
               <img src="assets/search-icon.svg" alt=""
             /></label>
-            <input id="cariJudulBuku" type="text" placeholder="Search Here"/>
+            <input id="cariJudulBuku" type="text" placeholder="Search Here" />
             <button id="pencarianSubmit" type="submit">Cari</button>
           </form>
         </div>
@@ -29,7 +29,7 @@
       <div class="container">
         <section class="input_section card">
           <h2>Masukkan Buku Baru</h2>
-          <form id="inputBuku">
+          <form action="" class="bookForm" id="bookForm">
             <div class="input" id="bagianJudul">
               <label for="inputJudulBuku">Judul</label>
               <input
@@ -62,26 +62,17 @@
               <label for="completedBook">Selesai dibaca</label>
               <input id="completedBook" type="checkbox" />
             </div>
-            <button id="submitBuku" type="submit">
-              Masukkan Buku
-            </button>
+            <button id="submitBuku" type="submit">Masukkan Buku</button>
           </form>
         </section>
       </div>
       <div class="unfinished_book card">
-        <section class="rakBuku">
-          <h2>Belum selesai dibaca</h2>
-          <div id="incompleteBookshelfList" class="book_list">
-          </div>
-        </section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list"></div>
       </div>
       <div class="finished_book card">
-        <section class="rakBuku">
-          <h2>Selesai dibaca</h2>
-
-          <div id="completeBookshelfList" class="book_list">
-          </div>
-        </section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list"></div>
       </div>
     </main>
     <footer>

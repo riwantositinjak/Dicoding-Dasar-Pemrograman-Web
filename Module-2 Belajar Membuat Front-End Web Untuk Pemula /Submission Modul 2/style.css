@@ -128,6 +128,15 @@ button {
   font-size: 1.3em;
 }
 
+.containerBook {
+  border: 2px solid #fff;
+  margin: 25px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
 /* footer */
 footer {
   color: black;
@@ -139,6 +148,40 @@ footer {
   width: 100%;
   padding: 20px;
   border: 5px solid #fff;
+}
+
+
+/* icon  */
+
+.buttonContainer button {
+  display: inline-block;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  min-width: 44px;
+  min-height: 44px;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  transform: scale(1);
+  transition: transform .2s ease-in;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.buttonContainer .tombolUlang {
+  background-image: url(assets/arrow-rotate-left-solid.svg);
+  width: 2rem;
+  height: 2rem;
+}
+
+.buttonContainer .tombolHapus {
+  background-image: url(assets/trash-can-solid.svg);
+}
+
+.buttonContainer .tombolCek {
+  background-image: url(assets/circle-check-solid.svg);
 }
 
 
