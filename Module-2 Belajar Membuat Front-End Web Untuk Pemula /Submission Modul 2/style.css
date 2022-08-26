@@ -1,0 +1,188 @@
+/* font family */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assets/library-bg.jpg);
+  color: white;
+}
+
+/* header  */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(247, 242, 242);
+  font-family: "Merriweather", serif;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+
+.judul {
+  margin: auto 400px;
+}
+
+#cariJudulBuku {
+  width: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+#pencarianSubmit {
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 60px;
+  padding: 11px;
+  margin: 0 20px 0 0 ;
+}
+
+/* main  */
+
+main {
+  text-align: center;
+  margin: 200px auto;
+  display: flex;
+  font-family: "Merriweather", serif;
+}
+
+.card {
+  box-shadow: rgba(149, 149, 172, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: 5px solid white;
+  border-radius: 5px;
+  margin: 0 25px;
+}
+
+/* container  */
+.container {
+  flex: 1;
+}
+
+.container h2 {
+  font-size: 2rem;
+}
+
+.rakBuku h2 {
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.finished_book {
+  flex: 1;
+}
+
+.unfinished_book {
+  flex: 1;
+}
+
+.input_section {
+  padding: 16px;
+}
+
+.input {
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+
+.input_section form .input input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input input {
+  font-size: 1.1rem;
+}
+
+.search_section {
+  display: flex;
+  justify-content: end;
+}
+
+.input_inline {
+  margin: 15px 0;
+}
+
+.input_inline label {
+  font-size: 1.3em;
+}
+
+#completedBook {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: lightblue;
+  font-size: 1.3em;
+}
+
+/* footer */
+footer {
+  color: black;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-weight: bolder;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  border: 5px solid #fff;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  .judul {
+    margin: 0 auto;
+  }
+  #cariJudulBuku {
+    margin: 0 auto;
+    display: block;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 45px 0 0 0;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+  }
+  .rakBuku h2 {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .input {
+    font-size: 1rem;
+  }
+  .card {
+    margin-top: 10px;
+  }
+  
+}
+
+

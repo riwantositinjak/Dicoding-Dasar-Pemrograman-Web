@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="judul">
+        <h1>BOOKSHELF APPS</h1>
+      </div>
+      <nav>
+        <div class="searchNav">
+          <form id="pencarianBuku">
+            <div class="searchInput" id="bagianPencarian"></div>
+            <label for="search">
+              <img src="assets/search-icon.svg" alt=""
+            /></label>
+            <input id="cariJudulBuku" type="text" placeholder="Search Here"/>
+            <button id="pencarianSubmit" type="submit">Cari</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="input_section card">
+          <h2>Masukkan Buku Baru</h2>
+          <form id="inputBuku">
+            <div class="input" id="bagianJudul">
+              <label for="inputJudulBuku">Judul</label>
+              <input
+                id="inputJudulBuku"
+                type="text"
+                placeholder="Tuliskan Judul Buku"
+                required
+              />
+            </div>
+            <div class="input" id="bagianPenulis">
+              <label for="inputPenulis">Penulis</label>
+              <input
+                id="inputPenulis"
+                type="text"
+                placeholder="Tuliskan Nama Penulisnya"
+                required
+              />
+            </div>
+            <div class="input" id="tahunTerbit">
+              <label for="inputTahunBuku">Tahun</label>
+              <input
+                id="inputTahunBuku"
+                type="number"
+                placeholder="Tuliskan Tahun Buku"
+                min="1900"
+                required
+              />
+            </div>
+            <div class="input_inline">
+              <label for="completedBook">Selesai dibaca</label>
+              <input id="completedBook" type="checkbox" />
+            </div>
+            <button id="submitBuku" type="submit">
+              Masukkan Buku
+            </button>
+          </form>
+        </section>
+      </div>
+      <div class="unfinished_book card">
+        <section class="rakBuku">
+          <h2>Belum selesai dibaca</h2>
+          <div id="incompleteBookshelfList" class="book_list">
+          </div>
+        </section>
+      </div>
+      <div class="finished_book card">
+        <section class="rakBuku">
+          <h2>Selesai dibaca</h2>
+
+          <div id="completeBookshelfList" class="book_list">
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>SUBMISSION DICODING FRONT END DEVELOPMENT</p>
+    </footer>
     <script src="script.js"></script>
-</body>
+    <script src="storage.js"></script>
+    <script src="documentObjectModel.js"></script>
+  </body>
 </html>

@@ -1,13 +1,18 @@
-const div = document.createElement('div');
-div.setAttribute('class', 'DOM');
+document.addEventListener("DOMContentLoaded", () => {
+    const formSubmit = document.getElementById("form");
+    formSubmit.addEventListener("submit", (e) => {
+        e.preventDefault();
+        masukkanBuku();
+    });
+    if (checkStorage()){ 
+        getData();
+    }
+});
 
-document.body.appendChild(div);
+document.addEventListener("onDataSave", () => {
+    alert("Data Saved");
+})
 
-const buttons = document.createElement('button');
-buttons.innerText ="Klik Disini";
-
-div.appendChild(buttons);
-
-buttons.style.width = " 100px";
-buttons.style.height = "200px";
-
+document.addEventListener('onDataLoad', () => {
+    perbaruiDataBuku();
+});
