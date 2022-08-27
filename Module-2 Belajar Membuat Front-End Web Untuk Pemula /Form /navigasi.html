@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigasi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .list {
+            display: flex;
+        }
+
+        .list li {
+            display: flex;
+            list-style: none;
+            display: inline-block;
+        }
+
+        .span div{
+            width: 20px;
+            height: 5px;
+            background-color: #000;
+            margin: 5px;
+        }
+
+        .span {
+            margin-top: auto;
+        }
+
+        .aktif {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div class="judul">
+                <h1>NAVIGASI</h1>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>HOME</li>
+                    <li>SHOP</li>
+                    <li>PROFILE</li>
+                </ul>
+            </div>
+            <div class="span">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        const burger = document.querySelector('.span');
+        burger.addEventListener('click', () => {
+            const list = document.querySelector('.list')
+            list.style.flexDirection = 'column';
+            list.classList.toggle('aktif');
+        } )
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Storage JSON</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="judul">Penambahan User Baru</h1>
+    <div id="contents">
+      <div class="child-content" id="user-form">
+        <h2>Form User Data</h2>
+        <hr />
+        <form id="form-data-user">
+          <div class="form-element">
+            <label for="nama">Nama user:</label><br />
+            <input
+              id="nama"
+              type="text"
+              name="nama"
+              placeholder="Nama user"
+              value=""
+              maxlength="10"
+              required
+            /><br />
+          </div>
+          <div class="form-element">
+            <label for="umur">Umur user:</label><br />
+            <input
+              id="umur"
+              type="text"
+              name="umur"
+              placeholder="Umur user"
+              value=""
+              maxlength="2"
+              required
+            /><br />
+          </div>
+          <div class="form-element">
+            <label for="domisili">Domisili user:</label><br />
+            <input
+              id="domisili"
+              type="text"
+              name="domisili"
+              placeholder="Domisili user"
+              value=""
+              maxlength="10"
+              required
+            /><br />
+          </div>
+          <div class="form-element">
+            <input id="submitButton" type="submit" value="Submit Data" />
+          </div>
+        </form>
+      </div>
+      <div class="child-content" id="user-list">
+        <h2>User List</h2>
+        <hr />
+        <table id="user-list-table">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Umur</th>
+              <th>Domisili</th>
+            </tr>
+          </thead>
+          <tbody id="user-list-detail"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

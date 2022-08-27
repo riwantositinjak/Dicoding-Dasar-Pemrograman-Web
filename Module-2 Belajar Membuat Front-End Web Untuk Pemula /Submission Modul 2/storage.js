@@ -36,7 +36,7 @@ const listObjectBuku = (judulBuku, penulisBuku, tahunTerbit, selesaiDibaca) => {
     tahunTerbit,
     selesaiDibaca,
   };
-}
+};
 
 const cariBuku = (bookId) => {
   for (books of buku) {

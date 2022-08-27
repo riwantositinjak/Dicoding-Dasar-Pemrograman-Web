@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -275,10 +277,23 @@ footer {
   }
 }
 
+@keyframes navigationLinkAnimate {
+  from {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
 @media screen and (max-width: 576px) {
-  /* body {
+  body {
     overflow-x: hidden;
-  } */
+  }
 
   .nav-bar {
     position: sticky;
@@ -313,9 +328,13 @@ footer {
   .icon {
     display: block;
   }
+
+  .nav-active {
+    transform: translateX(0%);
+  } 
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
@@ -356,9 +375,9 @@ footer {
 
 .nav-active {
   transform: translateX(0%);
-}
+} */
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
   body {
     overflow-x: hidden;
   }
@@ -390,7 +409,7 @@ footer {
   }
 
   .navigation li {
-    opacity: 0;
+    opacity: 0; 
   }
 
   .icon {
@@ -400,16 +419,5 @@ footer {
 
 .nav-active {
   transform: translateX(0%);
-}
+} */
 
-@keyframes navigationLinkAnimate {
-  from {
-    opacity: 1;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}

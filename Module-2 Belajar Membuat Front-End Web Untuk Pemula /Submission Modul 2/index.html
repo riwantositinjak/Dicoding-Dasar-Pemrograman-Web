@@ -14,13 +14,15 @@
       </div>
       <nav>
         <div class="searchNav">
-          <form id="pencarianBuku">
-            <div class="searchInput" id="bagianPencarian"></div>
-            <label for="search">
-              <img src="assets/search-icon.svg" alt=""
-            /></label>
-            <input id="cariJudulBuku" type="text" placeholder="Search Here" />
-            <button id="pencarianSubmit" type="submit">Cari</button>
+          <form id="pencarianBuku" action="">
+            <div class="searchInput" id="bagianPencarian">
+              <input id="cariJudulBuku" type="text" placeholder="Search Here" />
+            </div>
+            
+            <div class="tombolPencarian">
+              <button id="pencarianSubmit" type="submit">Cari</button>
+              <button id="resetPencarian" type="reset">Reset</button>
+            </div>
           </form>
         </div>
       </nav>
@@ -54,13 +56,9 @@
                 id="inputTahunBuku"
                 type="number"
                 placeholder="Tuliskan Tahun Buku"
-                min="1900"
+                min="1900" max="2022"
                 required
               />
-            </div>
-            <div class="input_inline">
-              <label for="completedBook">Selesai dibaca</label>
-              <input id="completedBook" type="checkbox" />
             </div>
             <button id="submitBuku" type="submit">Masukkan Buku</button>
           </form>
@@ -75,9 +73,6 @@
         <div id="completeBookshelfList" class="book_list"></div>
       </div>
     </main>
-    <footer>
-      <p>SUBMISSION DICODING FRONT END DEVELOPMENT</p>
-    </footer>
     <script src="script.js"></script>
     <script src="storage.js"></script>
     <script src="documentObjectModel.js"></script>

@@ -23,9 +23,12 @@ const formBook = (judulBuku, penulisBuku, tahunTerbit, selesaiDibaca) => {
   containerButton.classList.add("buttonContainer");
 
   if (selesaiDibaca) {
-    containerButton.append(showTombolUlang(), showTombolHapus());
+    containerButton.append(
+      showTombolUlang(),
+      showTombolHapus()
+    );
   } else {
-    containerButton.append(showTombolCek(), showTombolHapus());
+    containerButton.append(showTombolCek(),showTombolHapus());
   }
 
   const containerBook = document.createElement("div");
@@ -61,6 +64,12 @@ const makeButton = (typeButton, eventListener) => {
   });
   return tombol;
 };
+
+const tombolReset = document.querySelector("#resetPencarian");
+tombolReset.addEventListener("click", (e) => {
+  document.getElementById("cariJudulBuku").value = "";
+  pencarianBuku();
+});
 
 const masukkanBuku = () => {
   const incompleteBookshelfList = document.getElementById(bukuBelumDibaca);

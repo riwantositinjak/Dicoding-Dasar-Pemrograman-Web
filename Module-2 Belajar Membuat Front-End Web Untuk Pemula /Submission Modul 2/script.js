@@ -4,11 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     masukkanBuku();
   });
-  if (checkStorage()) getData();
+  if (checkStorage()) {
+    getData();
+  }
 });
 
 document.addEventListener("onDataSave", () => {
-  alert("Data Saved");
+  console.log("Data Saved");
 });
 
 document.addEventListener("onDataLoad", () => {
