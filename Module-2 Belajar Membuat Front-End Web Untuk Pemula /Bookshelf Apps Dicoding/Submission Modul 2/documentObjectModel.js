@@ -4,24 +4,23 @@ const itemBooks = "itemBook";
 
 const formBook = (judulBuku, penulisBuku, tahunTerbit, selesaiDibaca) => {
   const subContainer = document.createElement("div");
-  subContainer.classList.add("book-subContainer");
+  subContainer.classList.add("sub-container");
 
   const judulBukuTag = document.createElement("h2");
-  judulBukuTag.classList.add("book-judulBuku");
   judulBukuTag.innerText = judulBuku;
 
   const penulisBukuTag = document.createElement("p");
-  penulisBukuTag.classList.add("book-penulis");
+  penulisBukuTag.classList.add("penulis");
   penulisBukuTag.innerText = penulisBuku;
 
   const tahunTerbitTag = document.createElement("p");
-  tahunTerbitTag.classList.add("book-tahun");
+  tahunTerbitTag.classList.add("tahun");
   tahunTerbitTag.innerText = tahunTerbit;
 
   subContainer.append(judulBukuTag, penulisBukuTag, tahunTerbitTag);
 
   const containerButton = document.createElement("div");
-  containerButton.classList.add("book-buttonContainer");
+  containerButton.classList.add("buttonContainer");
 
   if (selesaiDibaca) {
     containerButton.append(showTombolUlang(), showTombolHapus());
@@ -30,7 +29,7 @@ const formBook = (judulBuku, penulisBuku, tahunTerbit, selesaiDibaca) => {
   }
 
   const containerBook = document.createElement("div");
-  containerBook.classList.add("book");
+  containerBook.classList.add("containerBook");
   containerBook.append(subContainer, containerButton);
 
   return containerBook;
@@ -63,12 +62,6 @@ const makeButton = (typeButton, eventListener) => {
   return tombol;
 };
 
-const formPencarian = document.getElementById("pencarianBuku");
-formPencarian.addEventListener("submit", (e) => {
-  e.preventDefault();
-  pencarianBuku();
-});
-
 const tombolReset = document.querySelector("#resetPencarian");
 tombolReset.addEventListener("click", (e) => {
   document.getElementById("cariJudulBuku").value = "";
@@ -99,13 +92,9 @@ const resetInputForm = () => {
 
 const tambahKeBukuSudahDibaca = (tagDOM) => {
   const daftarBukuTerbaca = document.getElementById(bukuSudahDibaca);
-  const judulBuku = tagDOM.querySelector(".book-subContainer h2").innerText;
-  const penulisBuku = tagDOM.querySelector(
-    ".book-subContainer .book-penulis"
-  ).innerText;
-  const tahunTerbit = tagDOM.querySelector(
-    ".book-subContainer .book-tahun"
-  ).innerText;
+  const judulBuku = tagDOM.querySelector(".sub-container h2").innerText;
+  const penulisBuku = tagDOM.querySelector(".sub-container .penulis").innerText;
+  const tahunTerbit = tagDOM.querySelector(".sub-container .tahun").innerText;
 
   const bukuBaru = formBook(judulBuku, penulisBuku, tahunTerbit, true);
 
@@ -129,13 +118,9 @@ const hapusBuku = (tagDOM) => {
 
 const ulangMasukkanBuku = (tagDOM) => {
   const daftarBukuBelumTerbaca = document.getElementById(bukuBelumDibaca);
-  const judulBuku = tagDOM.querySelector(".book-subContainer h2").innerText;
-  const penulisBuku = tagDOM.querySelector(
-    ".book-subContainer .book-penulis"
-  ).innerText;
-  const tahunTerbit = tagDOM.querySelector(
-    ".book-subContainer .book-tahun"
-  ).innerText;
+  const judulBuku = tagDOM.querySelector(".sub-container h2").innerText;
+  const penulisBuku = tagDOM.querySelector(".sub-container .penulis").innerText;
+  const tahunTerbit = tagDOM.querySelector(".sub-container .tahun").innerText;
 
   const bukuBaru = formBook(judulBuku, penulisBuku, tahunTerbit, false);
   const book = cariBuku(tagDOM[itemBooks]);
@@ -165,22 +150,6 @@ const perbaruiDataBuku = () => {
       daftarBukuTerbaca.append(bukuBaru);
     } else {
       daftarBukuBelumTerbaca.append(bukuBaru);
-    }
-  }
-};
-
-const pencarianBuku = () => {
-  const inputPencarian = document
-    .getElementById("cariJudulBuku")
-    .value.toLowerCase();
-  const itemContainer = document.getElementsByClassName("book");
-
-  for (let i = 0; i < itemContainer.length; i++) {
-    const containerItem = itemContainer[i].querySelector(".book-subContainer");
-    if (containerItem.textContent.toLowerCase().includes(inputPencarian)) {
-      itemContainer[i].classList.remove("sembunyi");
-    } else {
-      itemContainer[i].classList.add("sembunyi");
     }
   }
 };

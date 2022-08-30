@@ -128,7 +128,7 @@ main {
   cursor: pointer;
 }
 
-.book {
+.containerBook {
   border: 2px solid #fff;
   margin: 25px;
   padding: 10px;
@@ -136,11 +136,11 @@ main {
   background-image: linear-gradient(#2193b0, #6dd5ed);
 }
 
-.subContainer h2 {
+.sub-container h2 {
   font-size: 1.5rem;
 }
 
-.subContainer p {
+.sub-container p {
   font-size: 1.2rem;
 }
 
@@ -148,11 +148,7 @@ main {
   height: 5em;
 }
 
-.sembunyi {
-  display: none;
-}
-
-.book-buttonContainer button {
+.buttonContainer button {
   display: inline-block;
   margin-top: 10px;
   border: none;
@@ -167,15 +163,15 @@ main {
   justify-content: center;
 }
 
-.book-buttonContainer .tombolUlang {
+.buttonContainer .tombolUlang {
   background-image: url(assets/arrow-rotate-left-solid.svg);
 }
 
-.book-buttonContainer .tombolHapus {
+.buttonContainer .tombolHapus {
   background-image: url(assets/trash-can-solid.svg);
 }
 
-.book-buttonContainer .tombolCek {
+.buttonContainer .tombolCek {
   background-image: url(assets/circle-check-solid.svg);
 }
 
